@@ -1,32 +1,19 @@
-.rectangle {
-    width: 370px;
+div {
+    font-size: 1.1em;
       margin: 50px auto;
-        font-size: 1.1em;
+        width: 370px;
 
 }
 
-input, label, span {
-    margin: 5px 0;
-      font-size: 1em;
+input, label {
+    font-size: 1em;
+      margin: 5px 0;
         padding-left: 5px;
 
 }
 
-#rectangle-calc {
-    width: 70px;
-      margin-left: 63px;
-
-}
-
-span {
-    color: red;
-
-}
-
-#rectangle-width-validate,
-#rectangle-height-validate {
-    color: red;
-      margin-left: 63px;
-        font-size: 0.8em;
+#calculate {
+    margin-left: 63px;
+      width: 70px;
 
 }

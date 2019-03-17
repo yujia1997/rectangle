@@ -1,29 +1,19 @@
 $(function() {
-    var $width   = $('#rectangle-width'),
-      $height  = $('#rectangle-height'),
-      $calc    = $('#rectangle-calc'),
-      blnValid = false;
+    var $width = $('#width'),
+      $height = $('#height'),
+      $btnCal = $('#calculate'),
+      $perimeter = $('#perimeter'),
+      $area = $('#area');
 
-$calc.click(function() {
-      if(!blnValid) return;
+$btnCal.click(function(){
+      var w = $width.val(),
+          h = $height.val();
 
-          var width  = Number($width.val()),
-          height = Number($height.val()),
-          p      = roundFractional(width * 2 + height * 2, 2),
-          a      = roundFractional(width * height, 2);
+    var r = new Rectangle(w, h);
 
-    $('#rectangle-perimeter').val(p);
-        $('#rectangle-area').val(a);
-          
+        $perimeter.val(r.perimeter());
+            $area.val(r.area());
+              
 });
 
-$width.focusout(function() {
-      blnValid = validate('#rectangle-width');
-        
 });
-  
-$height.focusout(function() {
-      blnValid = validate('#rectangle-height');
-        
-});
-
